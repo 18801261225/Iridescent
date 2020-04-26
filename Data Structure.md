@@ -618,10 +618,10 @@ class treeNode:
            while nodestack:
                root = nodestack.pop()
                res.append(root)
-               if root.left:
-                   nodestack.append(root.left)
                if root.right:
                    nodestack.append(root.right)
+               if root.left:
+                   nodestack.append(root.left)
            # 此时res中存放了倒序的结点，使用res1将其倒序输出并取结点的值
            res1 = []
            for i in range(len(res)):
